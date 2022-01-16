@@ -1,0 +1,11 @@
+https://blog.csdn.net/lhwpc/article/details/120205916
+
+
+
+
+https://www.twblogs.net/a/5ef968bf293416316957c5c0
+
+
+除錯參考
+HTTP Error 500.30
+https://marcus116.blogspot.com/2019/05/netcore-aspnet-core-http-error-50030.html

@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asp.Net Core SignalR Server", "Asp.Net Core SignalR Server\Asp.Net Core SignalR Server.csproj", "{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asp.Net Core SignalR Console Client", "Asp.Net Core SignalR Console Client\Asp.Net Core SignalR Console Client.csproj", "{97204D41-5F1F-4531-B57C-DA3377EEA466}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asp.Net Core SignalR WinForm Client", "Asp.Net Core SignalR WinForm Client\Asp.Net Core SignalR WinForm Client.csproj", "{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{825A6EC2-5EC0-4843-AFAB-AACB0D07B4F6}"
+	ProjectSection(SolutionItems) = preProject
+		AppData.cs = AppData.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Debug|x64.ActiveCfg = Debug|x64
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Debug|x64.Build.0 = Debug|x64
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Debug|x86.ActiveCfg = Debug|x86
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Debug|x86.Build.0 = Debug|x86
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Release|x64.ActiveCfg = Release|x64
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Release|x64.Build.0 = Release|x64
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Release|x86.ActiveCfg = Release|x86
+		{5A1A8DE1-BF9A-4F87-A134-F325EC19501F}.Release|x86.Build.0 = Release|x86
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Debug|x64.ActiveCfg = Debug|x64
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Debug|x64.Build.0 = Debug|x64
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Debug|x86.ActiveCfg = Debug|x86
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Debug|x86.Build.0 = Debug|x86
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Release|x64.ActiveCfg = Release|x64
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Release|x64.Build.0 = Release|x64
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Release|x86.ActiveCfg = Release|x86
+		{97204D41-5F1F-4531-B57C-DA3377EEA466}.Release|x86.Build.0 = Release|x86
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Debug|x64.ActiveCfg = Debug|x64
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Debug|x64.Build.0 = Debug|x64
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Debug|x86.ActiveCfg = Debug|x86
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Debug|x86.Build.0 = Debug|x86
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Release|x64.ActiveCfg = Release|x64
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Release|x64.Build.0 = Release|x64
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Release|x86.ActiveCfg = Release|x86
+		{8FD305FE-33D4-46D5-A9F5-4D2AC0C60C50}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C1C7F18-E032-46DC-87A9-98A5888189BC}
+	EndGlobalSection
+EndGlobal
