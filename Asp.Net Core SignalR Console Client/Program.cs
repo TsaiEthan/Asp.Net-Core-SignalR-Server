@@ -8,9 +8,13 @@ namespace Asp.Net_Core_SignalR_Console_Client
 {
     public class Program
     {
-        private static BackgroundWorker HeartBeatFromClient;
+        //新建 AppData 物件
+        private static AppData appdata = new AppData();
         private static HubConnection connection;
         /*
+        private static BackgroundWorker HeartBeatFromClient;
+        
+        
         public BackgroundWorker HeartBeatFromClient
         {
             get { return _HeartBeatFromClient; }
@@ -22,9 +26,8 @@ namespace Asp.Net_Core_SignalR_Console_Client
             get { return _connection; }
             set { _connection = value; }
         }
-        */
-        //新建 AppData 物件
-        private static AppData appdata = new AppData();
+        
+
         private static void initBackgroundWorker()
         {
             HeartBeatFromClient = new BackgroundWorker();
@@ -51,13 +54,14 @@ namespace Asp.Net_Core_SignalR_Console_Client
                 }
             }
         }
+        */
         private static async Task HeartBeatToServer()
         {
             await connection.InvokeAsync("HeartBeatToClient", "ClientHB");
         }
         public static async Task Main(string[] args)
         {
-            initBackgroundWorker();
+            //initBackgroundWorker();
             Console.WriteLine("Asp.net Core SignalR Client Application Start!");
             connection = new HubConnectionBuilder()
                 .WithUrl(appdata.ServerURL)
@@ -68,6 +72,8 @@ namespace Asp.Net_Core_SignalR_Console_Client
             connection.On<string, string>("SendMessageToConsole", (name, data) =>
                 OnSend(ref name, ref data)
                 );
+            //來自SignalR Server的心跳檢查訊息
+            /*
             connection.On<string>("HeartBeatFromServer", data =>
             {
                 if (data != "ServerHB")
@@ -79,6 +85,7 @@ namespace Asp.Net_Core_SignalR_Console_Client
                     Console.WriteLine(data);
                 }
             });
+            */
             //若重新連接中，顯示訊息
             connection.Reconnecting += error =>
             {
@@ -96,7 +103,7 @@ namespace Asp.Net_Core_SignalR_Console_Client
                 // Start queuing or dropping messages.				
                 Console.WriteLine($"【連接狀態：{connection.State}】");
                 Console.WriteLine($"【重新連接完成，新的ConnectionId：{connection.ConnectionId}】");
-                HeartBeatFromClient.RunWorkerAsync();
+                //HeartBeatFromClient.RunWorkerAsync();
                 return Task.CompletedTask;
             };
             //若斷線，執行動作
@@ -155,7 +162,7 @@ waiting:
                     Console.WriteLine($"【連接狀態：{connection.State}】");
                     Console.WriteLine("【Connection ID ： " + connection.ConnectionId + "】");
                     Console.WriteLine("【Connected to " + appdata.ServerURL + " Successfully】");
-                    HeartBeatFromClient.RunWorkerAsync();
+                    //HeartBeatFromClient.RunWorkerAsync();
                 }
             }
             catch (Exception ex)

@@ -24,7 +24,7 @@ namespace Asp.Net_Core_SignalR_WinForm_Client
 		public SignalRClient()
 		{
 			InitializeComponent();
-			initBackgroundWorker();
+			//initBackgroundWorker();
 		}
 		private async void SignalRClient_Load(object sender, EventArgs e)
 		{
@@ -59,6 +59,8 @@ namespace Asp.Net_Core_SignalR_WinForm_Client
 					ShowMsg(ref name, ref data);
 				}
 			});
+			/*
+			//來自SignalR Server的心跳檢查訊息
 			connection.On<string>("HeartBeatFromServer", data =>
 			{
 				if (data != "ServerHB")
@@ -68,23 +70,6 @@ namespace Asp.Net_Core_SignalR_WinForm_Client
 				else
 				{
 					txtChatHistoryInvokeRequired(false, data);
-				}
-			});
-			/*
-			connection.On<string>("Heartbeat", data =>
-			{
-				if (txtChatHistory.InvokeRequired)
-				{
-					txtChatHistory.Invoke(new Action(() =>
-					{
-						ShowMsg("Heartbeat from Server", data);
-						ShowMsg("              WinForm Time", DateTimeOffset.Now.ToString("yyyy-MM-dd HH:mm:ss:fff"));
-					}));
-				}
-				else
-				{
-					ShowMsg("Heartbeat from Server", data);
-					ShowMsg("              WinForm Time", DateTimeOffset.Now.ToString("yyyy-MM-dd HH:mm:ss:fff"));
 				}
 			});
 			*/
@@ -105,7 +90,7 @@ namespace Asp.Net_Core_SignalR_WinForm_Client
 				// Start queuing or dropping messages.
 				txtChatHistoryInvokeRequired(true, $"連接狀態：{connection.State}");
 				txtChatHistoryInvokeRequired(false, $"重新連接完成，新的Connection ID：{connection.ConnectionId}");
-				HeartBeatFromClient.RunWorkerAsync();
+				//HeartBeatFromClient.RunWorkerAsync();
 				return Task.CompletedTask;
 			};
 			//若斷線，執行動作
@@ -165,7 +150,7 @@ namespace Asp.Net_Core_SignalR_WinForm_Client
 				if (connection == null || connection.State != HubConnectionState.Connected)
 				{
 					await connection.StartAsync();
-					HeartBeatFromClient.RunWorkerAsync();
+					//HeartBeatFromClient.RunWorkerAsync();
 					CheckState();
 					ShowMsg($"連接狀態：{connection.State}");
 					ShowMsg("Connection ID ： " + connection.ConnectionId);
