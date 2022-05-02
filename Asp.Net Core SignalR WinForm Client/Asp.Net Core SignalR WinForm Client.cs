@@ -127,14 +127,21 @@ namespace Asp.Net_Core_SignalR_WinForm_Client
 			ShowState_textBox.Clear();
 			if (connection != null)
 			{
-				if (connection.State == HubConnectionState.Connecting)
-					ShowState_textBox.ForeColor = Color.Fuchsia;
-				else if (connection.State == HubConnectionState.Reconnecting)
-					ShowState_textBox.ForeColor = Color.Blue;
-				else if (connection.State == HubConnectionState.Connected)
-					ShowState_textBox.ForeColor = Color.Green;
-				else
-					ShowState_textBox.ForeColor = Color.Red;
+				switch (connection.State)
+                {
+					case HubConnectionState.Connecting:
+						ShowState_textBox.ForeColor = Color.Fuchsia;
+						break;
+					case HubConnectionState.Reconnecting:
+						ShowState_textBox.ForeColor = Color.Blue;
+						break;
+					case HubConnectionState.Connected:
+						ShowState_textBox.ForeColor = Color.Green;
+						break;
+					default:
+						ShowState_textBox.ForeColor = Color.Red;
+						break;
+				}
 				ShowState_textBox.AppendText(connection.State.ToString());
 			}
 			else
